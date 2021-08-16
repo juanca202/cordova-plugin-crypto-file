@@ -104,7 +104,7 @@ public class DecryptResource extends CordovaPlugin {
 
   private boolean isCryptFiles(String uri) {
     for (String ext: CRYPT_FILES) {
-      if (uri.endsWith(ext)) {
+      if (uri.endsWith(ext) && uri.endsWith("cordova.js") == false && uri.indexOf("plugins") == -1) {
         return true;
       }
     }
