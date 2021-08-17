@@ -8,20 +8,6 @@
     <author>PeterHdd</author>
     <license>Apache 2.0 License</license>
 
-    <platform name="ios">
-        <config-file target="config.xml" parent="/*">
-		    <feature name="CDVCrypt">
-			    <param name="ios-package" value="CDVCrypt"/>
-			    <param name="onload" value="true"/>
-		    </feature>
-        </config-file>
-
-        <header-file src="src/ios/CDVCrypt.h" />
-        <source-file src="src/ios/CDVCrypt.m" />
-        <header-file src="src/ios/CDVCryptURLProtocol.h" />
-        <source-file src="src/ios/CDVCryptURLProtocol.m" />
-    </platform>
-
     <platform name="android">
         <config-file target="config.xml" parent="/*">
             <feature name="DecryptResource">
@@ -38,6 +24,8 @@
             <file regex="\.(htm|html|js|css)$" />
         </include>
         <exclude>
+            <file regex="cordova\.js$" />
+            <file regex="plugins" />
         </exclude>
     </cryptfiles>
 
